@@ -1,19 +1,26 @@
 * Propforth Pomodoro
 
-This is a super-simple Pomodoro timer writen in Propforth.  To use it:
+This is a super-simple [[https://en.wikipedia.org/wiki/Pomodoro_Technique][Pomodoro]] timer writen in [[https://code.google.com/p/propforth/][Propforth]] for the
+[[http://www.parallax.com/product/40000][Parallax Propeller P8X32A QuickStart]] microcontroller. It has the
+virtue of requiring no hardware except the QuickStart board itself.
+(It has no other virutes.)
 
- - Buy the Parallax Propeller P8X32A QuickStart microcontroller;
- - install the Propeller tool (see docs for the microcontroller);
+To use it:
+
+ - Buy the QuickStart (I got mine for about $7 on clearance at Radio
+   Shack);
+ - install the [[http://www.parallax.com/downloads/propeller-tool-software][Propeller Tool]] (see docs for the microcontroller);
  - using the Propeller tool, install Propforth (see the Propforth docs);
- - make a serial connection to the Propforth REPL;
- - cut and paste the Fourth code in pomodoro.4th into the terminal;
+ - make a serial connection to the Propforth REPL with a serial
+   terminal program like [[http://ttssh2.sourceforge.jp/index.html.en][TeraTerm]] or [[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html][PuTTY]];
+ - cut and paste the Fourth code in [[pomodoro.4th][pomodoro.4th]] into the terminal;
    the Fourth system will save an image with the pomodoro word set to
    execute at boot time;
  - once that is done, reset the QuickStart board.
 
 From then on, it will do one simple thing: it will turn on one LED
 light about every three minutes (every 187 seconds, to be exact) and
-once it runs out of LEDS to turn on (25 minutes) it will start
+once it runs out of LEDS to turn on (about 25 minutes) it will start
 flashing and being generally annoying.  At that point, take your
 Pomodoro break.  Once you are ready to start working again, hit the
 reset button and it starts all over.
@@ -21,3 +28,14 @@ reset button and it starts all over.
 Yes, it's that dumb.
 
 When you are sick to death of it, unplug it.
+
+If you want to change the amount of time it waits, reinstall Propforth
+to the EEPROM from scratch, then modify the Forth word `chunk’ in the
+program to be a value which is 1/8th of the number of seconds you want
+to wait.  So, if you want to work for 32 minutes, one-eighth of that
+is 4 minutes, so you would use
+
+     =: chunk 240 ;=
+
+Then paste the new version of the program into the serial terminal
+again.
