@@ -1,15 +1,18 @@
 * Propforth Pomodoro
 
 This is a super-simple [[https://en.wikipedia.org/wiki/Pomodoro_Technique][Pomodoro]] timer writen in [[https://code.google.com/p/propforth/][Propforth]] for the
-[[http://www.parallax.com/product/40000][Parallax Propeller P8X32A QuickStart]] microcontroller. It has the
+[[http://www.parallax.com/product/40000][Parallax Propeller P8X32A QuickStart]] microcontroller.  It has the
 virtue of requiring no hardware except the QuickStart board itself.
-(It has no other virutes.)
+(It has no other virues.)  The code is shorter than this README by a
+good bit.
 
 To use it:
 
  - Buy the QuickStart (I got mine for about $7 on clearance at Radio
    Shack);
- - install the [[http://www.parallax.com/downloads/propeller-tool-software][Propeller Tool]] (see docs for the microcontroller);
+ - install the [[http://www.parallax.com/downloads/propeller-tool-software][Propeller Tool]] (see docs for the microcontroller, and
+   unfortunately I don’t know if there is any way to use the
+   microcontroller without MS Windows);
  - using the Propeller tool, install Propforth (see the Propforth docs);
  - make a serial connection to the Propforth REPL with a serial
    terminal program like [[http://ttssh2.sourceforge.jp/index.html.en][TeraTerm]] or [[http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html][PuTTY]];
