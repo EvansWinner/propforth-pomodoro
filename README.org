@@ -1,9 +1,9 @@
 * Propforth Pomodoro
 
-This is a super-simple [[https://en.wikipedia.org/wiki/Pomodoro_Technique][Pomodoro]] timer writen in [[https://code.google.com/p/propforth/][Propforth]] for the
+This is a super-simple [[https://en.wikipedia.org/wiki/Pomodoro_Technique][Pomodoro]] timer written in [[https://code.google.com/p/propforth/][Propforth]] for the
 [[http://www.parallax.com/product/40000][Parallax Propeller P8X32A QuickStart]] microcontroller.  It has the
 virtue of requiring no hardware except the QuickStart board itself.
-(It has no other virues.)  The code is shorter than this README by a
+(It has no other virtues.)  The code is shorter than this README by a
 good bit.
 
 To use it:
