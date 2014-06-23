@@ -1,0 +1,23 @@
+* Propforth Pomodoro
+
+This is a super-simple Pomodoro timer writen in Propforth.  To use it:
+
+ - Buy the Parallax Propeller P8X32A QuickStart microcontroller;
+ - install the Propeller tool (see docs for the microcontroller);
+ - using the Propeller tool, install Propforth (see the Propforth docs);
+ - make a serial connection to the Propforth REPL;
+ - cut and paste the Fourth code in pomodoro.4th into the terminal;
+   the Fourth system will save an image with the pomodoro word set to
+   execute at boot time;
+ - once that is done, reset the QuickStart board.
+
+From then on, it will do one simple thing: it will turn on one LED
+light about every three minutes (every 187 seconds, to be exact) and
+once it runs out of LEDS to turn on (25 minutes) it will start
+flashing and being generally annoying.  At that point, take your
+Pomodoro break.  Once you are ready to start working again, hit the
+reset button and it starts all over.
+
+Yes, it's that dumb.
+
+When you are sick to death of it, unplug it.
